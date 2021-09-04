@@ -22,7 +22,7 @@ jobs:
           curl
           --request POST
           --header "Content-Type: application/json"
-          --data '{"title":[123],"description":"test","completed": false}'
+          --data '{"title":"test","description":"test","completed": false}'
           --silent
           --show-error
           --fail
