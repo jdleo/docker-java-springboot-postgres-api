@@ -1,0 +1,29 @@
+name: test
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build docker stack
+        run: docker-compose up -d
+      - name: Sleep for 30 seconds
+        run: sleep 30s
+        shell: bash
+      - name: test - list todos
+        run: >
+          curl
+          --silent
+          --show-error
+          --fail
+          "localhost:8080/api/v1/todos"
+      - name: test - create todo
+        run: >
+          curl
+          --request POST
+          --header "Content-Type: application/json"
+          --data '{"title":"test","description":"test","completed": false}'
+          --silent
+          --show-error
+          --fail
+          "localhost:8080/api/v1/todos"
