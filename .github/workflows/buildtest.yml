@@ -8,10 +8,10 @@ jobs:
       - name: build docker stack
         run: docker-compose up -d
       - name: test - list todos
-        run: |
-          curl --connect-timeout 5 \
-            --max-time 10 \
-            --retry 5 \
-            --retry-delay 0 \
-            --retry-max-time 40 \ 
-            "localhost:8080/api/v1/todos"
+        run: >
+          curl --connect-timeout 5
+          --max-time 10
+          --retry 5
+          --retry-delay 0
+          --retry-max-time 40
+          "localhost:8080/api/v1/todos"
