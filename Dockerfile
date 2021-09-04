@@ -5,7 +5,7 @@ FROM openjdk:8
 COPY . .
 
 # build the application
-RUN ["./mvnw", "clean", "package", "install"]
+RUN ["./mvnw", "clean", "package", "-Dmaven.test.skip"]
 
 # expose port 8080
 EXPOSE 8080
