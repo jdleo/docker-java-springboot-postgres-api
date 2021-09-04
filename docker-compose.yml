@@ -18,8 +18,6 @@ services:
 
   api:
     build: .
-    image: sbpg-api:0.1
-    network_mode: bridge
     depends_on:
       postgres:
         condition: service_healthy
@@ -28,5 +26,3 @@ services:
     ports:
       - 8080:8080
     restart: unless-stopped
-volumes:
-  postgres-data:
