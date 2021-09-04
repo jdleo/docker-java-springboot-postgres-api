@@ -1,3 +1,5 @@
+[![build-workflow](https://github.com/jdleo/docker-java-springboot-postgres-api/actions/workflows/build.yml/badge.svg)](https://github.com/jdleo/docker-java-springboot-postgres-api/actions/workflows/build.yml)
+
 # Docker Java Springboot w/ Postgres, Dockerized
 
 Simple proof-of-concept boilerplate for dockerized Java Springboot API, with postgresql service in Docker Compose.
