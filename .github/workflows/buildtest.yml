@@ -14,4 +14,4 @@ jobs:
             --retry 5 \
             --retry-delay 0 \
             --retry-max-time 40 \ 
-            'localhost:8080/api/v1/todos'
+            "localhost:8080/api/v1/todos"
