@@ -15,7 +15,7 @@ WORKDIR /home/app
 COPY . .
 
 # build the application
-RUN mvn clean package
+RUN ["./mvnw", "clean", "package", "install"]
 
 # expose port 8080
 EXPOSE 8080
