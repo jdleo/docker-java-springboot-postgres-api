@@ -7,8 +7,23 @@ jobs:
       - uses: actions/checkout@v2
       - name: build docker stack
         run: docker-compose up -d
-      - name: Sleep for 60 seconds
-        run: sleep 60s
+      - name: Sleep for 45 seconds
+        run: sleep 45s
         shell: bash
       - name: test - list todos
-        run: curl "localhost:8080/api/v1/todos"
+        run: >
+          curl
+          --silent
+          --show-error
+          --fail
+          "localhost:8080/api/v1/todos"
+      - name: test - create todo
+        run: >
+          curl
+          --request POST
+          --header "Content-Type: application/json"
+          --data '{"title":"test","description":"test","completed": false}'
+          --silent
+          --show-error
+          --fail
+          "localhost:8080/api/v1/todos"
