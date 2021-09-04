@@ -42,6 +42,12 @@ public class TodoController {
     @PostMapping("/todos")
     public Todo createTodo(@Valid @RequestBody Todo todo) {
         logger.info("creating new todo");
+        
+        // set created_at and updated_at
+        todo.setCreatedAt(System.currentTimeMillis());
+        todo.setUpdatedAt(System.currentTimeMillis());
+
+        // save and return response
         return repo.save(todo);
     }
 
