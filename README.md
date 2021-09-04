@@ -1,4 +1,4 @@
-[![build-workflow](https://github.com/jdleo/docker-java-springboot-postgres-api/actions/workflows/build.yml/badge.svg)](https://github.com/jdleo/docker-java-springboot-postgres-api/actions/workflows/build.yml)
+[![build-workflow](https://github.com/jdleo/docker-java-springboot-postgres-api/actions/workflows/build.yml/badge.svg)](https://github.com/jdleo/docker-java-springboot-postgres-api/actions/workflows/build.yml) [![test](https://github.com/jdleo/docker-java-springboot-postgres-api/actions/workflows/buildtest.yml/badge.svg)](https://github.com/jdleo/docker-java-springboot-postgres-api/actions/workflows/buildtest.yml)
 
 # Docker Java Springboot w/ Postgres, Dockerized
 
