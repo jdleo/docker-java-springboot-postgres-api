@@ -32,7 +32,7 @@ Body:
 {
   "title": "test",
   "description": "test description",
-  "is_completed": false
+  "completed": false
 }
 ```
 
@@ -48,7 +48,7 @@ Body:
 {
   "title": "test",
   "description": "updated description",
-  "is_completed": true
+  "completed": true
 }
 ```
 
